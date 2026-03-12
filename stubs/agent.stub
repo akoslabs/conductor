@@ -1,0 +1,35 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Conductor\Agents\Agent;
+
+final class {{ class }} extends Agent
+{
+    protected string $name = '{{ name }}';
+
+    protected string $description = '';
+
+    protected string $provider = 'anthropic';
+
+    protected string $model = 'claude-sonnet-4-20250514';
+
+    protected ?int $tokenBudget = null;
+
+    public function systemPrompt(): string
+    {
+        return 'You are a helpful assistant.';
+    }
+
+    public function tools(): array
+    {
+        return [];
+    }
+
+    public function memory(): ?string
+    {
+        return null;
+    }
+}

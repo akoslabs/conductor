@@ -1,0 +1,34 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Conductor\Tools\Tool;
+
+final class {{ class }} extends Tool
+{
+    public function name(): string
+    {
+        return '{{ name }}';
+    }
+
+    public function description(): string
+    {
+        return '';
+    }
+
+    public function parameters(): array
+    {
+        return [
+            'type' => 'object',
+            'properties' => [],
+            'required' => [],
+        ];
+    }
+
+    public function execute(array $arguments): string|array
+    {
+        return '';
+    }
+}

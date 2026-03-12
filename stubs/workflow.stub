@@ -1,0 +1,20 @@
+<?php
+
+declare(strict_types=1);
+
+namespace {{ namespace }};
+
+use Conductor\Workflows\Workflow;
+use Conductor\Workflows\WorkflowState;
+
+final class {{ class }} extends Workflow
+{
+    protected string $name = '{{ name }}';
+
+    public function steps(): array
+    {
+        return [
+            //
+        ];
+    }
+}
