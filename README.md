@@ -31,12 +31,15 @@ php artisan vendor:publish --provider="Conductor\ConductorServiceProvider"
 php artisan migrate
 ```
 
-In your `.env`:
+In your `.env`, set your provider, model, and the API key for that provider:
 
 ```env
 CONDUCTOR_PROVIDER=anthropic
 CONDUCTOR_MODEL=claude-sonnet-4-20250514
+ANTHROPIC_API_KEY=your-key-here
 ```
+
+The API key variable depends on which provider you're using — `OPENAI_API_KEY` for OpenAI, `MISTRAL_API_KEY` for Mistral, etc. Ollama doesn't need a key since it runs locally. See [Prism's docs](https://github.com/prism-php/prism) for the full list of provider configuration options.
 
 ## Agents
 
