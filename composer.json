@@ -1,5 +1,5 @@
 {
-    "name": "conductor-php/conductor",
+    "name": "akoslabs/conductor",
     "description": "A Laravel package for building production AI features: agents, multi-step workflows, RAG pipelines, and tool-calling chains.",
     "keywords": ["laravel", "ai", "agents", "workflows", "rag", "llm"],
     "license": "MIT",
