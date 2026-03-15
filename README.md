@@ -31,7 +31,7 @@ php artisan vendor:publish --provider="Conductor\ConductorServiceProvider"
 php artisan migrate
 ```
 
-In your `.env`, set your provider, model, and the API key for that provider:
+In your `.env`, set your provider, model, and the matching API key:
 
 ```env
 CONDUCTOR_PROVIDER=anthropic
@@ -39,7 +39,20 @@ CONDUCTOR_MODEL=claude-sonnet-4-20250514
 ANTHROPIC_API_KEY=your-key-here
 ```
 
-The API key variable depends on which provider you're using — `OPENAI_API_KEY` for OpenAI, `MISTRAL_API_KEY` for Mistral, etc. Ollama doesn't need a key since it runs locally. See [Prism's docs](https://github.com/prism-php/prism) for the full list of provider configuration options.
+Each provider has its own key variable:
+
+| Provider | API Key Variable | Example Model |
+|----------|-----------------|---------------|
+| `anthropic` | `ANTHROPIC_API_KEY` | `claude-sonnet-4-20250514` |
+| `openai` | `OPENAI_API_KEY` | `gpt-4o` |
+| `mistral` | `MISTRAL_API_KEY` | `mistral-large-latest` |
+| `groq` | `GROQ_API_KEY` | `llama-3.1-70b-versatile` |
+| `gemini` | `GEMINI_API_KEY` | `gemini-1.5-pro` |
+| `xai` | `XAI_API_KEY` | `grok-2` |
+| `deepseek` | `DEEPSEEK_API_KEY` | `deepseek-chat` |
+| `ollama` | none (runs locally) | `llama3` |
+
+See [Prism's docs](https://github.com/prism-php/prism) for more provider config options like custom URLs and org IDs.
 
 ## Agents
 
